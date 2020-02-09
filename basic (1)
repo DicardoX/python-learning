@@ -1,0 +1,134 @@
+#This file is to record some basic knowledge of py.
+
+#if & else format
+if True:
+    print("True")
+elif False:
+    print("Flase")
+else:
+    print("Puzzle")
+
+#wait for the input
+raw_input("Please press the enter to continue... \n")
+
+#quotation marks in py
+word1 = 'word'
+word2 = 'word ' 'and'
+word3 = 'word' + 'and' + 'peace'#form 1
+sentence = "This is a sentence."    #form 2
+paragraph = """\tThis is a pargraph,    
+and it works!"""    #form 3
+
+
+#newline output or not
+x = 'a'; y = 'b'
+
+print x#newline output
+print y
+
+print x, y# not a newline output
+print x,
+print y
+
+#assignment
+name, age, studentID = 'Dicardo', 20, 518021910698
+
+#stadard data types:
+#numbers, strings, list, tuple, dictionary
+
+#exchange between vars:
+var1 = 1; var2 = 2
+var1, var2 = var2, var1
+print var1, var2#output: 2 1
+
+#"del"
+if(__name__ == '__main__'):
+    a = [1, 2, 3, 4, 5]
+    b = a[0]
+    del a[0]
+    print a#output: [2, 3, 4, 5]
+    print b#output: 1
+    del a
+    #print a#error occured!
+
+#string array subscript order
+arr = "abcde"#order: 0, 1, 2, 3, 4; reverse order: -5, -4, -3, -2, -1.
+
+print arr[0:5]#output: abcde    equals to 'for(int i=0; i<5; i++) print'
+print arr[-5:-1]#output: abcd   do not output arr[-1] == e
+print arr[-1]#output: e
+print arr[2:]#output from the third element: cde
+print (arr+' ')*2#ouput: abcde abcde    * -> function it twice
+print arr + ' oops!'#output: abcde oops!
+print arr[0:4:2]#output: ac     steps
+
+#list: use [] to define
+list = [1, 2, 3]
+print list#output: [1, 2, 3]
+
+#tuple: use () to define, but cannot be updated!
+tuple = ('Dicardo', 20, 518021910698)
+print tuple#output: ('Dicardo', 20, 518021910698)
+print tuple[0]#output: Dicardo
+#illegal operation: tuple[0] = 'a'
+
+#dictionary: use {} to define, access by key
+dic1 = {}
+dic1['one'] = "This is one"
+dic1[2] = "This is two"
+print dic1#output: {2: 'This is two', 'one': 'This is one'}
+print dic1['one']#output: This is one
+print dic1[2]#output: This is two
+print dic1.keys()#output: [2, 'one']
+print dic1.values()#output: ['This is two', 'This is one']
+
+dic2 = {'name':'Dicardo', 'age':20}
+print dic2['name']#output: Dicardo
+print dic2['age']#output: 20
+print dic2#output: {'age': 20, 'name': 'Dicardo'}
+
+#data type conversion
+x = int('12', 8)#convert to int, when use the base elem, you must input by string
+print x#output: 10 (10 in base 8 is 12)
+x = int (3.6)
+print x#output: 3
+x = int('12')
+print x#ouput: 12
+
+x = long('123', 16)
+print x#output: 291
+
+x = float(1)
+print x#output: 1.0
+x = float('12')
+print x#output: 12.0
+
+x = complex(1,2)
+print x#output: (1+2j)
+x = complex(1)
+print x#output: (1+0j)
+x = complex('1')
+print x#output: (1+0j)
+x = complex('1+2j')#can not add space in it!
+print x#output: (1+2j)
+
+list = [1, 2, 3]
+tuple = ('Dicardo', 20, 518021910698)
+dic = {1: 'x1 = 2', 'two':'x2 = 34'}
+print str(list)#output: [1, 2, 3]
+print str(tuple)#output: ('Dicardo', 20, 518021910698)
+print str(dic)#output: {1: 'x1 = 2', 'two':'x2 = 34'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
